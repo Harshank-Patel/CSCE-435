@@ -1,0 +1,16 @@
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 0 PID 62146 RUNNING AT c001
+srun: error: c001: task 0: Out Of Memory
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 1 PID 62147 RUNNING AT c001
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+slurmstepd: error: Detected 1053 oom-kill event(s) in StepId=2013411.0 cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.
+I_MPI_JOB_TIMEOUT = -1 second(s): job ending due to startup timeout
+slurmstepd: error: Detected 1053 oom-kill event(s) in StepId=2013411.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.

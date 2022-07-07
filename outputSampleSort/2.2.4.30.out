@@ -1,0 +1,51 @@
+[c001:62834:0:62834] Caught signal 7 (Bus error: nonexistent physical address)
+==== backtrace (tid:  62834) ====
+ 0 0x000000000002039e ucs_debug_print_backtrace()  /tmp/j-perdue/easybuild/UCX/1.9.0/GCCcore-10.2.0/ucx-1.9.0/src/ucs/debug/debug.c:656
+ 1 0x0000000000a740f4 get_adaptive_frame_size()  /localdisk/jenkins/workspace/workspace/ch4-build-linux-2019/impi-ch4-build-linux_build/CONF/impi-ch4-build-linux-release/label/impi-ch4-build-linux-intel64/_buildspace/release/../../src/mpid/ch4/shm/posix/eager/include/intel_transport_send.h:1019
+ 2 0x0000000000a740f4 send_frame()  /localdisk/jenkins/workspace/workspace/ch4-build-linux-2019/impi-ch4-build-linux_build/CONF/impi-ch4-build-linux-release/label/impi-ch4-build-linux-intel64/_buildspace/release/../../src/mpid/ch4/shm/posix/eager/include/intel_transport_send.h:1336
+ 3 0x0000000000a6d8b7 MPIDI_POSIX_eager_send()  /localdisk/jenkins/workspace/workspace/ch4-build-linux-2019/impi-ch4-build-linux_build/CONF/impi-ch4-build-linux-release/label/impi-ch4-build-linux-intel64/_buildspace/release/../../src/mpid/ch4/shm/posix/eager/include/intel_transport_send.h:1451
+ 4 0x0000000000a6d8b7 intel_transport_progress()  /localdisk/jenkins/workspace/workspace/ch4-build-linux-2019/impi-ch4-build-linux_build/CONF/impi-ch4-build-linux-release/label/impi-ch4-build-linux-intel64/_buildspace/release/../../src/mpid/ch4/shm/posix/eager/include/intel_transport_progress.h:182
+ 5 0x00000000001ab5e5 MPIDI_SHM_progress()  /localdisk/jenkins/workspace/workspace/ch4-build-linux-2019/impi-ch4-build-linux_build/CONF/impi-ch4-build-linux-release/label/impi-ch4-build-linux-intel64/_buildspace/release/../../src/mpid/ch4/shm/src/../src/shm_noinline.h:106
+ 6 0x00000000001ab5e5 MPIDI_Progress_test()  /localdisk/jenkins/workspace/workspace/ch4-build-linux-2019/impi-ch4-build-linux_build/CONF/impi-ch4-build-linux-release/label/impi-ch4-build-linux-intel64/_buildspace/release/../../src/mpid/ch4/src/ch4_progress.c:203
+ 7 0x00000000001ab5e5 MPID_Progress_test()  /localdisk/jenkins/workspace/workspace/ch4-build-linux-2019/impi-ch4-build-linux_build/CONF/impi-ch4-build-linux-release/label/impi-ch4-build-linux-intel64/_buildspace/release/../../src/mpid/ch4/src/ch4_progress.c:236
+ 8 0x00000000001ab5e5 MPID_Progress_wait()  /localdisk/jenkins/workspace/workspace/ch4-build-linux-2019/impi-ch4-build-linux_build/CONF/impi-ch4-build-linux-release/label/impi-ch4-build-linux-intel64/_buildspace/release/../../src/mpid/ch4/src/ch4_progress.c:297
+ 9 0x00000000007f3bad MPIR_Waitall_impl()  /localdisk/jenkins/workspace/workspace/ch4-build-linux-2019/impi-ch4-build-linux_build/CONF/impi-ch4-build-linux-release/label/impi-ch4-build-linux-intel64/_buildspace/release/../../src/mpi/request/waitall.c:48
+10 0x00000000007f3bad MPID_Waitall()  /localdisk/jenkins/workspace/workspace/ch4-build-linux-2019/impi-ch4-build-linux_build/CONF/impi-ch4-build-linux-release/label/impi-ch4-build-linux-intel64/_buildspace/release/../../src/mpid/ch4/include/mpidpost.h:183
+11 0x00000000007f3bad MPIR_Waitall()  /localdisk/jenkins/workspace/workspace/ch4-build-linux-2019/impi-ch4-build-linux_build/CONF/impi-ch4-build-linux-release/label/impi-ch4-build-linux-intel64/_buildspace/release/../../src/mpi/request/waitall.c:173
+12 0x000000000033f83a MPIC_Waitall()  /localdisk/jenkins/workspace/workspace/ch4-build-linux-2019/impi-ch4-build-linux_build/CONF/impi-ch4-build-linux-release/label/impi-ch4-build-linux-intel64/_buildspace/release/../../src/mpi/coll/helper_fns.c:639
+13 0x000000000072e0f6 MPIR_Scatter_intra_shumilin()  /localdisk/jenkins/workspace/workspace/ch4-build-linux-2019/impi-ch4-build-linux_build/CONF/impi-ch4-build-linux-release/label/impi-ch4-build-linux-intel64/_buildspace/release/../../src/mpi/coll/intel/scatter/scatter_intra_shumilin.c:80
+14 0x0000000000185676 MPIDI_NM_mpi_scatter()  /localdisk/jenkins/workspace/workspace/ch4-build-linux-2019/impi-ch4-build-linux_build/CONF/impi-ch4-build-linux-release/label/impi-ch4-build-linux-intel64/_buildspace/release/../../src/mpid/ch4/netmod/include/../ofi/intel/ofi_coll.h:562
+15 0x0000000000185676 MPIDI_Scatter_intra_composition_alpha()  /localdisk/jenkins/workspace/workspace/ch4-build-linux-2019/impi-ch4-build-linux_build/CONF/impi-ch4-build-linux-release/label/impi-ch4-build-linux-intel64/_buildspace/release/../../src/mpid/ch4/src/intel/ch4_coll_impl.h:2006
+16 0x0000000000185676 MPID_Scatter_invoke()  /localdisk/jenkins/workspace/workspace/ch4-build-linux-2019/impi-ch4-build-linux_build/CONF/impi-ch4-build-linux-release/label/impi-ch4-build-linux-intel64/_buildspace/release/../../src/mpid/ch4/src/intel/ch4_coll_select_utils.c:1982
+17 0x0000000000185676 MPIDI_coll_invoke()  /localdisk/jenkins/workspace/workspace/ch4-build-linux-2019/impi-ch4-build-linux_build/CONF/impi-ch4-build-linux-release/label/impi-ch4-build-linux-intel64/_buildspace/release/../../src/mpid/ch4/src/intel/ch4_coll_select_utils.c:3416
+18 0x0000000000154f1e MPIDI_coll_select()  /localdisk/jenkins/workspace/workspace/ch4-build-linux-2019/impi-ch4-build-linux_build/CONF/impi-ch4-build-linux-release/label/impi-ch4-build-linux-intel64/_buildspace/release/../../src/mpid/ch4/src/intel/ch4_coll_globals_default.c:129
+19 0x000000000021d671 MPID_Scatter()  /localdisk/jenkins/workspace/workspace/ch4-build-linux-2019/impi-ch4-build-linux_build/CONF/impi-ch4-build-linux-release/label/impi-ch4-build-linux-intel64/_buildspace/release/../../src/mpid/ch4/src/intel/ch4_coll.h:136
+20 0x000000000072e977 PMPI_Scatter()  /localdisk/jenkins/workspace/workspace/ch4-build-linux-2019/impi-ch4-build-linux_build/CONF/impi-ch4-build-linux-release/label/impi-ch4-build-linux-intel64/_buildspace/release/../../src/mpi/coll/scatter/scatter.c:389
+21 0x000000000040179d main()  ???:0
+22 0x0000000000022555 __libc_start_main()  ???:0
+23 0x00000000004012a9 _start()  ???:0
+=================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 0 PID 62834 RUNNING AT c001
+=   KILLED BY SIGNAL: 7 (Bus error)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 1 PID 62835 RUNNING AT c001
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 2 PID 62836 RUNNING AT c001
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 3 PID 62837 RUNNING AT c001
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================

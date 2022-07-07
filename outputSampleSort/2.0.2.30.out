@@ -1,0 +1,16 @@
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 0 PID 256078 RUNNING AT c249
+srun: error: c249: task 0: Out Of Memory
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 1 PID 256079 RUNNING AT c249
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+slurmstepd: error: Detected 20 oom-kill event(s) in StepId=2013369.0 cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.
+I_MPI_JOB_TIMEOUT = -1 second(s): job ending due to startup timeout
+slurmstepd: error: Detected 20 oom-kill event(s) in StepId=2013369.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.

@@ -1,0 +1,28 @@
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 0 PID 256090 RUNNING AT c249
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 1 PID 256091 RUNNING AT c249
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 2 PID 256092 RUNNING AT c249
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 3 PID 256093 RUNNING AT c249
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+slurmstepd: error: Detected 911 oom-kill event(s) in StepId=2013370.0 cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.
+srun: error: c249: task 0: Out Of Memory
+I_MPI_JOB_TIMEOUT = -1 second(s): job ending due to startup timeout
+slurmstepd: error: Detected 911 oom-kill event(s) in StepId=2013370.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.
